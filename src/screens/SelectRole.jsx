@@ -1,11 +1,11 @@
 import './index.css'
 
-export function SelectRole({deploy, attach}){
+export function SelectRole({setAsDeployer}){
   return(
     <div className='section'>
-      <button className='button' onClick={() => deploy()}>Deploy Contract</button>
+      <button className='button' onClick={() => setAsDeployer(true)}>Deploy Contract</button>
       <hr />
-      <button className='button' onClick={() => attach()}>Attach to existing contract</button>
+      <button className='button' onClick={() => setAsDeployer(false)}>Attach to existing contract</button>
     </div>
   )
 }
